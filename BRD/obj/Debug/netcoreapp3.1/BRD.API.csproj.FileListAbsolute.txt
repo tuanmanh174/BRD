@@ -1,0 +1,9 @@
+C:\Project\BRD\BRD\BRD\obj\Debug\netcoreapp3.1\BRD.API.csproj.AssemblyReference.cache
+C:\Project\BRD\BRD\BRD\obj\Debug\netcoreapp3.1\BRD.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\BRD\BRD\BRD\obj\Debug\netcoreapp3.1\BRD.API.AssemblyInfoInputs.cache
+C:\Project\BRD\BRD\BRD\obj\Debug\netcoreapp3.1\BRD.API.AssemblyInfo.cs
+C:\Project\BRD\BRD\BRD\obj\Debug\netcoreapp3.1\BRD.API.csproj.CoreCompileInputs.cache
+C:\Project\BRD\BRD\BRD\obj\Debug\netcoreapp3.1\BRD.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Project\BRD\BRD\BRD\obj\Debug\netcoreapp3.1\BRD.API.RazorAssemblyInfo.cache
+C:\Project\BRD\BRD\BRD\obj\Debug\netcoreapp3.1\BRD.API.RazorAssemblyInfo.cs
+C:\Project\BRD\BRD\BRD\obj\Debug\netcoreapp3.1\BRD.API.MvcApplicationPartsAssemblyInfo.cs

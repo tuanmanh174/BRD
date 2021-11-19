@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Formatters.Json" Version="2.2.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.14.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BRD.Common\BRD.Common.csproj" />
+    <ProjectReference Include="..\BRD.DataAccess\BRD.DataAccess.csproj" />
+    <ProjectReference Include="..\BRD.DataModel\BRD.DataModel.csproj" />
+    <ProjectReference Include="..\BRD.Repository\BRD.Repository.csproj" />
+    <ProjectReference Include="..\BRD.Service\BRD.Service.csproj" />
+  </ItemGroup>
+
+</Project>

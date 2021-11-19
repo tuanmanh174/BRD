@@ -1,0 +1,14 @@
+C:\Project\BRD\BRD\BRD.Service\bin\Debug\netcoreapp3.1\BRD.Service.exe
+C:\Project\BRD\BRD\BRD.Service\bin\Debug\netcoreapp3.1\BRD.Service.deps.json
+C:\Project\BRD\BRD\BRD.Service\bin\Debug\netcoreapp3.1\BRD.Service.runtimeconfig.json
+C:\Project\BRD\BRD\BRD.Service\bin\Debug\netcoreapp3.1\BRD.Service.runtimeconfig.dev.json
+C:\Project\BRD\BRD\BRD.Service\bin\Debug\netcoreapp3.1\BRD.Service.dll
+C:\Project\BRD\BRD\BRD.Service\bin\Debug\netcoreapp3.1\BRD.Service.pdb
+C:\Project\BRD\BRD\BRD.Service\obj\Debug\netcoreapp3.1\BRD.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\BRD\BRD\BRD.Service\obj\Debug\netcoreapp3.1\BRD.Service.AssemblyInfoInputs.cache
+C:\Project\BRD\BRD\BRD.Service\obj\Debug\netcoreapp3.1\BRD.Service.AssemblyInfo.cs
+C:\Project\BRD\BRD\BRD.Service\obj\Debug\netcoreapp3.1\BRD.Service.csproj.CoreCompileInputs.cache
+C:\Project\BRD\BRD\BRD.Service\obj\Debug\netcoreapp3.1\BRD.Service.dll
+C:\Project\BRD\BRD\BRD.Service\obj\Debug\netcoreapp3.1\BRD.Service.pdb
+C:\Project\BRD\BRD\BRD.Service\obj\Debug\netcoreapp3.1\BRD.Service.genruntimeconfig.cache
+C:\Project\BRD\BRD\BRD.Service\obj\Debug\netcoreapp3.1\BRD.Service.csproj.AssemblyReference.cache

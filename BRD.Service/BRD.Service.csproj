@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.21" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
+    <PackageReference Include="MimeKit" Version="2.15.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.14.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BRD.Common\BRD.Common.csproj" />
+    <ProjectReference Include="..\BRD.DataAccess\BRD.DataAccess.csproj" />
+    <ProjectReference Include="..\BRD.DataModel\BRD.DataModel.csproj" />
+    <ProjectReference Include="..\BRD.Repository\BRD.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
