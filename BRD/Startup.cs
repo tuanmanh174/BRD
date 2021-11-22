@@ -1,7 +1,3 @@
-using BRD.API.Helpers;
-using BRD.Repository;
-using BRD.Service;
-using BRD.Service.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,12 +25,6 @@ namespace BRD
         {
             services.AddCors();
             services.AddControllers();
-            // configure strongly typed settings object
-            services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
-
-            // configure DI for application services
-            services.AddScoped<UserRepository, UserService>();
-            services.AddRazorPages();
             services.AddSwaggerGen(options =>
             {
                 options.SwaggerDoc("v2", new Microsoft.OpenApi.Models.OpenApiInfo
@@ -71,8 +61,6 @@ namespace BRD
                .AllowAnyMethod()
                .AllowAnyHeader());
 
-            // custom jwt auth middleware
-            app.UseMiddleware<JwtMiddleware>();
 
             app.UseAuthorization();
 
@@ -80,7 +68,7 @@ namespace BRD
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+                //endpoints.MapRazorPages();
             });
 
             app.UseSwagger();
