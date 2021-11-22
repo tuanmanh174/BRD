@@ -18,6 +18,7 @@ namespace BRD.Repository
 
         private readonly IHttpContextAccessor _httpContext;
         //private ISubjectCategoryRepository _subjectCategoryRepository;
+        private IUserService _userServiceRepository;
        
         #endregion
 
@@ -58,7 +59,15 @@ namespace BRD.Repository
         //    }
         //}
 
-        
+        public IUserService UserServiceRepository
+        {
+            get
+            {
+                return _userServiceRepository = _userServiceRepository ?? new IUserService(_appDbContext, _httpContext);
+            }
+        }
+
+
 
         /// <summary>
         /// Save
