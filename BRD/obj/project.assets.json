@@ -2573,7 +2573,8 @@
           "BRD.DataModel": "1.0.0",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.2.0",
-          "Microsoft.EntityFrameworkCore": "3.1.21"
+          "Microsoft.EntityFrameworkCore": "3.1.21",
+          "System.IdentityModel.Tokens.Jwt": "6.14.1"
         },
         "compile": {
           "bin/placeholder/BRD.Repository.dll": {}

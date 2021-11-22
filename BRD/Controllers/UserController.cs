@@ -10,9 +10,9 @@ namespace BRD.API.Controllers
     [Route("[controller]")]
     public class UserController : Controller
     {
-        private IUserService _userService;
+        private UserRepository _userService;
 
-        public UserController(IUserService userService)
+        public UserController(UserRepository userService)
         {
             _userService = userService;
         }

@@ -1,4 +1,4 @@
-﻿namespace BRD.Service.Infrastructure
+﻿namespace BRD.Repository
 {
     public class AppSettings
     {

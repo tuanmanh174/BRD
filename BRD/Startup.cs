@@ -33,7 +33,7 @@ namespace BRD
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
 
             // configure DI for application services
-            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<UserRepository, UserService>();
             services.AddRazorPages();
             services.AddSwaggerGen(options =>
             {

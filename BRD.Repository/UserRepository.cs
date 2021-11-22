@@ -1,7 +1,5 @@
 ﻿using BRD.DataModel.Login;
 using BRD.DataModel.Users;
-using BRD.Repository;
-using BRD.Service.Infrastructure;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -11,9 +9,16 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 
-namespace BRD.Service
+namespace BRD.Repository
 {
-    public class UserService : IUserService
+    public interface UserRepository
+    {
+        AuthenticateResponse Authenticate(AuthenticateRequest model);
+        IEnumerable<User> GetAll();
+        User GetById(int id);
+    }
+
+    public class UserService : UserRepository
     {
         // users hardcoded for simplicity, store in a db with hashed passwords in production applications
         private List<User> _users = new List<User>
