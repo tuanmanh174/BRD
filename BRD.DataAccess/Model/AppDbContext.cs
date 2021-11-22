@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Text;
-using Oracle.ManagedDataAccess.Client;
 
 namespace BRD.DataAccess.Model
 {
@@ -18,22 +17,15 @@ namespace BRD.DataAccess.Model
         {
         }
 
-        public static readonly ILoggerFactory ConsoleLoggerFactory = LoggerFactory.Create(builder =>
-    {
-        builder
-        .AddFilter((category, level) =>
-            category == DbLoggerCategory.Database.Command.Name && level == LogLevel.Debug)
-        .AddConsole();
-    });
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder
-                            .UseLoggerFactory(ConsoleLoggerFactory)
-                            .UseOracle("connection string to test db.");
+                //optionsBuilder
+                //            .UseLoggerFactory(ConsoleLoggerFactory)
+                //            .UseOracle("connection string to test db.");
             }
         }
 

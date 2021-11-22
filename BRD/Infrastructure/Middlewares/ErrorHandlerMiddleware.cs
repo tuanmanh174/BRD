@@ -19,7 +19,7 @@ namespace BRD.API.Infrastructure
     {
         private readonly RequestDelegate _next;
         private readonly ILogger _logger;
-        private readonly IOptions<MvcJsonOptions> _jsonOptions;
+        private readonly IOptions<MvcNewtonsoftJsonOptions> _jsonOptions;
         private readonly IMailService _mailService;
         private readonly IConfiguration _configuration;
 
@@ -31,7 +31,7 @@ namespace BRD.API.Infrastructure
         /// <param name="logger"></param>
         /// <param name="configuration"></param>
         /// <param name="mailService"></param>
-        public ErrorHandlerMiddleware(RequestDelegate next, IOptions<MvcJsonOptions> jsonOptions,
+        public ErrorHandlerMiddleware(RequestDelegate next, IOptions<MvcNewtonsoftJsonOptions> jsonOptions,
             ILogger<ErrorHandlerMiddleware> logger, IConfiguration configuration, IMailService mailService)
         {
             _next = next;

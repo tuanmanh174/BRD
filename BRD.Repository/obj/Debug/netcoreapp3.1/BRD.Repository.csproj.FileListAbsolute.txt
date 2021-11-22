@@ -72,3 +72,5 @@ C:\Project\BRD\BRD\BRD.Repository\bin\Debug\netcoreapp3.1\BRD.Common.dll
 C:\Project\BRD\BRD\BRD.Repository\bin\Debug\netcoreapp3.1\BRD.DataModel.dll
 C:\Project\BRD\BRD\BRD.Repository\bin\Debug\netcoreapp3.1\BRD.DataModel.pdb
 C:\Project\BRD\BRD\BRD.Repository\bin\Debug\netcoreapp3.1\BRD.Common.pdb
+C:\Project\BRD\BRD\BRD.Repository\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Project\BRD\BRD\BRD.Repository\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
