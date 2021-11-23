@@ -56,3 +56,15 @@ C:\Project\BRD\BRD\BRD.DataAccess\bin\Debug\netcoreapp3.1\Microsoft.Extensions.H
 C:\Project\BRD\BRD\BRD.DataAccess\bin\Debug\netcoreapp3.1\Microsoft.Extensions.ObjectPool.dll
 C:\Project\BRD\BRD\BRD.DataAccess\bin\Debug\netcoreapp3.1\Microsoft.Net.Http.Headers.dll
 C:\Project\BRD\BRD\BRD.DataAccess\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Project\BRD\BRD\BRD.DataAccess\bin\Debug\netcoreapp3.1\BRD.DataModel.deps.json
+C:\Project\BRD\BRD\BRD.DataAccess\bin\Debug\netcoreapp3.1\BRD.DataModel.runtimeconfig.json
+C:\Project\BRD\BRD\BRD.DataAccess\bin\Debug\netcoreapp3.1\BRD.DataModel.runtimeconfig.dev.json
+C:\Project\BRD\BRD\BRD.DataAccess\bin\Debug\netcoreapp3.1\BRD.Common.deps.json
+C:\Project\BRD\BRD\BRD.DataAccess\bin\Debug\netcoreapp3.1\BRD.Common.runtimeconfig.json
+C:\Project\BRD\BRD\BRD.DataAccess\bin\Debug\netcoreapp3.1\BRD.Common.runtimeconfig.dev.json
+C:\Project\BRD\BRD\BRD.DataAccess\bin\Debug\netcoreapp3.1\BRD.Common.exe
+C:\Project\BRD\BRD\BRD.DataAccess\bin\Debug\netcoreapp3.1\BRD.DataModel.exe
+C:\Project\BRD\BRD\BRD.DataAccess\bin\Debug\netcoreapp3.1\BRD.Common.dll
+C:\Project\BRD\BRD\BRD.DataAccess\bin\Debug\netcoreapp3.1\BRD.DataModel.dll
+C:\Project\BRD\BRD\BRD.DataAccess\bin\Debug\netcoreapp3.1\BRD.DataModel.pdb
+C:\Project\BRD\BRD\BRD.DataAccess\bin\Debug\netcoreapp3.1\BRD.Common.pdb

@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "c70c8543-561c-44d1-af12-4d8d78283a2c": {
+      "ProjectGuid": "c70c8543-561c-44d1-af12-4d8d78283a2c",
+      "DisplayName": "BRD.API",
+      "ColorIndex": 0
+    },
+    "bb5cd011-9ce9-483d-8bc8-8bd5a4bbeb43": {
+      "ProjectGuid": "bb5cd011-9ce9-483d-8bc8-8bd5a4bbeb43",
+      "DisplayName": "BRD.Service",
+      "ColorIndex": 1
+    },
+    "0c01a502-0356-4952-97f8-85d84d293d51": {
+      "ProjectGuid": "0c01a502-0356-4952-97f8-85d84d293d51",
+      "DisplayName": "BRD.Repository",
+      "ColorIndex": 2
+    },
+    "ebcf4e4e-775b-4f83-acc1-c854129740b9": {
+      "ProjectGuid": "ebcf4e4e-775b-4f83-acc1-c854129740b9",
+      "DisplayName": "BRD.DataAccess",
+      "ColorIndex": 3
+    },
+    "f38a245a-1492-4449-a8cc-d908ba05e126": {
+      "ProjectGuid": "f38a245a-1492-4449-a8cc-d908ba05e126",
+      "DisplayName": "BRD.DataModel",
+      "ColorIndex": 4
+    },
+    "77323812-6526-44e4-89e4-13de6ffd8c57": {
+      "ProjectGuid": "77323812-6526-44e4-89e4-13de6ffd8c57",
+      "DisplayName": "BRD.Common",
+      "ColorIndex": 5
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 6
+}

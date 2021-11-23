@@ -1,3 +1,6 @@
+using BRD.DataAccess;
+using BRD.Repository;
+using BRD.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -34,6 +37,9 @@ namespace BRD
                     Description = "Sample service for Learner",
                 });
             });
+
+            services.AddDbContext<Context>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
 
         }
 

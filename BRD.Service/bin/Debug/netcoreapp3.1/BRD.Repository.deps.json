@@ -837,6 +837,7 @@
       },
       "BRD.DataAccess/1.0.0": {
         "dependencies": {
+          "BRD.DataModel": "1.0.0",
           "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.2.0",
           "Microsoft.EntityFrameworkCore": "3.1.21",
           "Microsoft.EntityFrameworkCore.Relational": "3.1.21"

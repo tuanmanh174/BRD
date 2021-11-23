@@ -101,7 +101,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Project\\BRD\\BRD\\BRD.DataModel\\BRD.DataModel.csproj": {
+                "projectPath": "C:\\Project\\BRD\\BRD\\BRD.DataModel\\BRD.DataModel.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
