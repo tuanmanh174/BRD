@@ -7,12 +7,13 @@ namespace BRD.API.Controllers
     [Route("[controller]")]
     public class CountriesController : ControllerBase
     {
-        public ICountryRepository _countries;
+        private readonly ICountryRepository _countries;
         public CountriesController(ICountryRepository countries)
         {
             _countries = countries;
         }
 
+        
         [HttpGet]
         public IActionResult Get()
         {

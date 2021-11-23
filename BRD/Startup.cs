@@ -1,9 +1,11 @@
 using BRD.DataAccess;
 using BRD.Repository;
 using BRD.Service;
+using Fluent.Infrastructure.FluentModel;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -37,7 +39,10 @@ namespace BRD
                     Description = "Sample service for Learner",
                 });
             });
-
+            services.AddDbContext<Context>(options =>
+                options.UseOracle(
+                    Configuration.GetConnectionString("DefaultConnection")));
+            services.AddHttpContextAccessor();
             //services.AddDbContext<Context>(options => options.Use(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<ICountryRepository, CountryService>();
