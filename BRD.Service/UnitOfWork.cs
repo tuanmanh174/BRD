@@ -9,18 +9,20 @@ namespace BRD.Service
     public class UnitOfWork : IUnitOfWork
     {
         private Context _context;
-        private IAccountRepository _accountRepository;
+        private ICountryRepository _countriesRepository;
 
         public UnitOfWork(Context context)
         {
             _context = context;
         }
 
-        public IAccountRepository AccountRepository
+   
+
+        public ICountryRepository CountriesRepository
         {
             get
             {
-                return _accountRepository = _accountRepository ?? new AccountService(_context);
+                return _countriesRepository = _countriesRepository ?? new CountryService(_context);
             }
         }
 

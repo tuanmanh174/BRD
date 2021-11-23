@@ -38,8 +38,9 @@ namespace BRD
                 });
             });
 
-            services.AddDbContext<Context>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddTransient<IUnitOfWork, UnitOfWork>();
+            //services.AddDbContext<Context>(options => options.Use(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<ICountryRepository, CountryService>();
 
         }
 
@@ -68,7 +69,7 @@ namespace BRD
                .AllowAnyHeader());
 
 
-            app.UseAuthorization();
+            //app.UseAuthorization();
 
 
 
