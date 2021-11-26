@@ -1,10 +1,10 @@
 ﻿using BRD.DataAccess;
-using BRD.DataModel;
 using BRD.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Countries = BRD.DataAccess.Countries;
 
 namespace BRD.Service
 {
@@ -20,14 +20,21 @@ namespace BRD.Service
         public IList<Countries> GetAll()
         {
             IList<Countries> list = new List<Countries>();
-            var lst = _context.COUNTRIES.ToList();
-            foreach (var c in lst)
+            try
             {
-                var ab = new Countries();
-                ab.COUNTRY_NAME = c.COUNTRY_NAME;
-                ab.REGION_ID = c.REGION_ID;
-                ab.COUNTRY_ID = c.COUNTRY_ID;
-                list.Add(ab);
+                var lst = _context.COUNTRIES.ToList();
+                foreach (var c in lst)
+                {
+                    var ab = new Countries();
+                    ab.COUNTRY_NAME = c.COUNTRY_NAME;
+                    ab.REGION_ID = c.REGION_ID;
+                    ab.COUNTRY_ID = c.COUNTRY_ID;
+                    list.Add(ab);
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
             }
             return list;
         }

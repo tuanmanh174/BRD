@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,13 +41,25 @@ namespace BRD
                     Description = "Sample service for Learner",
                 });
             });
-            services.AddDbContext<Context>(options =>
-                options.UseOracle(
-                    Configuration.GetConnectionString("DefaultConnection")));
+
             services.AddHttpContextAccessor();
-            //services.AddDbContext<Context>(options => options.Use(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddEntityFrameworkOracle()
+                .AddDbContext<Context>(builder => builder
+                .UseOracle(
+                    Configuration["Data:ConnectionStrings:DefaultConnection"],
+                    sqlOptions => sqlOptions.CommandTimeout(60).UseRelationalNulls(true).MinBatchSize(2))
+                .EnableDetailedErrors(false).EnableSensitiveDataLogging(false)
+                .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking), ServiceLifetime.Scoped);
+            OracleConfiguration.StatementCacheSize = 300;
+            OracleConfiguration.FetchSize = 300000;
+            OracleConfiguration.TraceFileLocation = @"C:\app\oracle\product\19c\db_home1\network\trace";
+            OracleConfiguration.TraceLevel = 7;
+            OracleConfiguration.TnsAdmin = @"C:\app\oracle\product\19c\db_home1\network\admin";
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            //thêm các service business
             services.AddScoped<ICountryRepository, CountryService>();
+            services.AddScoped<IAccountRepository, AccountService>();
 
         }
 
@@ -62,6 +76,7 @@ namespace BRD
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+           
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
@@ -75,13 +90,12 @@ namespace BRD
 
 
             //app.UseAuthorization();
-
-
-
             app.UseEndpoints(endpoints =>
             {
-                //endpoints.MapRazorPages();
+                endpoints.MapControllers();
             });
+
+
 
             app.UseSwagger();
             app.UseSwaggerUI(options => options.SwaggerEndpoint("/swagger/v2/swagger.json", "PlaceInfo Services"));

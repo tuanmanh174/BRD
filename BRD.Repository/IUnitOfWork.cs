@@ -7,6 +7,7 @@ namespace BRD.Repository
     public interface IUnitOfWork
     {
         ICountryRepository CountriesRepository { get; }
+        IAccountRepository AccountRepository { get; }
         void Save();
     }
 }

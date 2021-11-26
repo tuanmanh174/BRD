@@ -1,8 +1,10 @@
 ﻿using BRD.DataAccess;
 using BRD.DataModel;
 using BRD.Repository;
+using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 
@@ -17,26 +19,19 @@ namespace BRD.Service
             _context = context;
         }
 
-        public IList<Account> GetAll()
+        public IList<DataModel.Account> GetAll()
         {
-            return _context.Accounts.ToList();
-        }
-        public Account GetById(string account)
-        {
-            var _account = _context.Accounts.Where(x => x.Name == account).FirstOrDefault();
-            return _account;
-        }
-        public void Insert(Account account)
-        {
-            _context.Accounts.Add(new Account());
-        }
-        public void Update(Account account)
-        {
-            _context.Accounts.Update(account);
-        }
-        public void Delete(Account account)
-        {
-            _context.Accounts.Remove(account);
+            var ab = new List<DataModel.Account>();
+            var acc = _context.ACCOUNT.ToList();
+            foreach (var item in acc)
+            {
+                var account = new DataModel.Account();
+                account.AccountName = item.ACCOUNTNAME;
+                account.Id = item.ID;
+                ab.Add(account);
+            }
+
+            return ab;
         }
 
     }

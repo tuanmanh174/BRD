@@ -118,10 +118,6 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
-            "Devart.Data.Oracle.EFCore": {
-              "target": "Package",
-              "version": "[9.5.520, )"
-            },
             "Microsoft.AspNetCore.Mvc.Formatters.Json": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -139,6 +135,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.2.6, )"
+            },
+            "Oracle.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.21.4, )"
             },
             "System.Configuration.ConfigurationManager": {
               "target": "Package",
@@ -492,10 +492,6 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
-            "Devart.Data.Oracle.EFCore": {
-              "target": "Package",
-              "version": "[9.5.520, )"
-            },
             "Fluent.Infrastructure": {
               "target": "Package",
               "version": "[2.0.0-beta-01, )"
@@ -531,6 +527,10 @@
             "Microsoft.OpenApi": {
               "target": "Package",
               "version": "[1.1.4, )"
+            },
+            "Oracle.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.21.4, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

@@ -10,6 +10,7 @@ namespace BRD.Service
     {
         private Context _context;
         private ICountryRepository _countriesRepository;
+        private IAccountRepository _accountRepository;
 
         public UnitOfWork(Context context)
         {
@@ -25,6 +26,15 @@ namespace BRD.Service
                 return _countriesRepository = _countriesRepository ?? new CountryService(_context);
             }
         }
+
+        public IAccountRepository AccountRepository
+        {
+            get
+            {
+                return _accountRepository = _accountRepository ?? new AccountService(_context);
+            }
+        }
+
 
         public void Save()
         {
