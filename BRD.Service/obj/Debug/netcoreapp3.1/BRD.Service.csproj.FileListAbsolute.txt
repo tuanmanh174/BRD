@@ -121,3 +121,11 @@ C:\Project\BRD\BRD\BRD.Service\obj\Debug\netcoreapp3.1\BRD.Service.csproj.CopyCo
 C:\Project\BRD\BRD\BRD.Service\obj\Debug\netcoreapp3.1\BRD.Service.dll
 C:\Project\BRD\BRD\BRD.Service\obj\Debug\netcoreapp3.1\BRD.Service.pdb
 C:\Project\BRD\BRD\BRD.Service\obj\Debug\netcoreapp3.1\BRD.Service.genruntimeconfig.cache
+C:\Project\BRD\BRD\BRD.Service\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Project\BRD\BRD\BRD.Service\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Project\BRD\BRD\BRD.Service\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Project\BRD\BRD\BRD.Service\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Project\BRD\BRD\BRD.Service\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Project\BRD\BRD\BRD.Service\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Project\BRD\BRD\BRD.Service\bin\Debug\netcoreapp3.1\DocumentFormat.OpenXml.dll
+C:\Project\BRD\BRD\BRD.Service\bin\Debug\netcoreapp3.1\System.IO.Packaging.dll

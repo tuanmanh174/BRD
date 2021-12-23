@@ -8,6 +8,6 @@ namespace BRD.Repository
     public interface IAccountRepository
     {
         IList<Account> GetAll();
-
+        bool CheckConnection();
     }
 }

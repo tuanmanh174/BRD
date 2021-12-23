@@ -1,5 +1,6 @@
 ﻿using BRD.DataAccess;
 using BRD.Repository;
+using DocumentFormat.OpenXml.Spreadsheet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,8 @@ namespace BRD.Service
 
         public IList<Countries> GetAll()
         {
+           
+            var asdf = _context.Database.CurrentTransaction;
             IList<Countries> list = new List<Countries>();
             try
             {
@@ -27,7 +30,6 @@ namespace BRD.Service
                 {
                     var ab = new Countries();
                     ab.COUNTRY_NAME = c.COUNTRY_NAME;
-                    ab.REGION_ID = c.REGION_ID;
                     ab.COUNTRY_ID = c.COUNTRY_ID;
                     list.Add(ab);
                 }
@@ -40,6 +42,7 @@ namespace BRD.Service
         }
         public Countries GetById(string account)
         {
+
             var c = _context.COUNTRIES.Where(x => x.COUNTRY_NAME == account).FirstOrDefault();
             var ab = new Countries();
             ab.COUNTRY_NAME = c.COUNTRY_NAME;

@@ -9,7 +9,7 @@ namespace BRD.DataModel
     public class Account
     {
         
-        public int Id { get; set; }
+        public decimal Id { get; set; }
         public string AccountName { get; set; }
     }
 }

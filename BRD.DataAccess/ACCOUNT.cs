@@ -6,11 +6,11 @@ using System.Text;
 
 namespace BRD.DataAccess
 {
-    [Table("ACCOUNT")]
-    public class ACCOUNT 
+    //[Table("ACCOUNTS", Schema = "orcl")]
+    public class Accounts
     {
         [Key]
-        public int ID { get; set; }
-        public string ACCOUNTNAME { get; set; }
+        public decimal id { get; set; }
+        public string accountname { get; set; }
     }
 }

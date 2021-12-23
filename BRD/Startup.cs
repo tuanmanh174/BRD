@@ -4,6 +4,7 @@ using BRD.Service;
 using Fluent.Infrastructure.FluentModel;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
@@ -55,6 +56,7 @@ namespace BRD
             OracleConfiguration.TraceFileLocation = @"C:\app\oracle\product\19c\db_home1\network\trace";
             OracleConfiguration.TraceLevel = 7;
             OracleConfiguration.TnsAdmin = @"C:\app\oracle\product\19c\db_home1\network\admin";
+
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             //thêm các service business
@@ -99,7 +101,28 @@ namespace BRD
 
             app.UseSwagger();
             app.UseSwaggerUI(options => options.SwaggerEndpoint("/swagger/v2/swagger.json", "PlaceInfo Services"));
+            //app.Run(async (Context) =>
+            //{
+            //    string conString = "User Id=hr;Password=hr;" +
+            //    "Data Source=(DESCRIPTION =(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))(CONNECT_DATA =(SERVER = DEDICATED)(SERVICE_NAME = orcl)));";
+            //    using (OracleConnection con = new OracleConnection(conString))
+            //    {
+            //        using (OracleCommand cmd = con.CreateCommand())
+            //        {
+            //            try
+            //            {
+            //                OracleConfiguration.OracleDataSources.Add("orcl", "DESCRIPTION =(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))(CONNECT_DATA =(SERVER = DEDICATED)(SERVICE_NAME = orcl))");
+            //                OracleConfiguration.StatementCacheSize = 25;
+            //                OracleConfiguration.SelfTuning = false;
 
+            //            }
+            //            catch (Exception ex)
+            //            {
+            //                await Context.Response.WriteAsync(ex.ToString());
+            //            }
+            //        }
+            //    }
+            //});
 
 
         }

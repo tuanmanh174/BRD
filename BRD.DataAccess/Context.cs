@@ -7,17 +7,11 @@ namespace BRD.DataAccess
 {
     public class Context : DbContext
     {
+        public Context()
+        { }
         public Context(DbContextOptions<Context> options) : base(options)
-        {
-            //this.ChangeTracker.LazyLoadingEnabled = false;
-        }
+        { }
 
-        //public Context()
-        //{
-
-        //    this.ChangeTracker.LazyLoadingEnabled = false;
-
-        //}
 
 
 
@@ -26,22 +20,30 @@ namespace BRD.DataAccess
             if (!optionsBuilder.IsConfigured)
             {
                 //optionsBuilder.UseOracle(@"User Id=hr;Password=hr;Data Source=orcl;");
+                //optionsBuilder.UseOracle(@"Data Source =  (DESCRIPTION =(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))(CONNECT_DATA =(SERVER = DEDICATED)(SERVICE_NAME = orcl)));User ID=hr;Password=hr;");
+                //optionsBuilder.UseOracle(@"Data Source =  (DESCRIPTION =(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))(CONNECT_DATA =(SERVER = DEDICATED)(SERVICE_NAME = orcl)));User ID=hr;Password=hr;");
             }
-                
+
         }
 
 
-        public DbSet<Countries> COUNTRIES { get; set; }
+        public virtual DbSet<Countries> COUNTRIES { get; set; }
 
-        public DbSet<ACCOUNT> ACCOUNT { get; set; }
+        public virtual DbSet<Accounts> accounts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
-                modelBuilder.HasDefaultSchema("orcl");
+
+            modelBuilder.HasDefaultSchema("orcl");
+
+            modelBuilder.Entity<Accounts>(entity =>
+            {
+                entity.HasIndex(e => e.id);
+                entity.Property(e => e.accountname).HasMaxLength(20);
+            });
 
         }
 
-       
+
     }
 }

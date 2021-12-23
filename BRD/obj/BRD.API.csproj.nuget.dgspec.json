@@ -386,6 +386,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "DocumentFormat.OpenXml": {
+              "target": "Package",
+              "version": "[2.15.0, )"
+            },
             "Microsoft.AspNetCore.Hosting.Abstractions": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -409,6 +413,10 @@
             "MimeKit": {
               "target": "Package",
               "version": "[2.15.1, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
